@@ -169,18 +169,18 @@ All our sample results are available under `Prediction_Results` folder [here](ht
 
 Our results for UTKFACE which can be seen in utk_train.ipynb are:
 - Test dataset
-mae = 6.5
-mse = 82.9
+mae = 6.5,
+ mse = 82.9,
 gender prediction accuracy = 89%
 
 - Validation dataset
-mae = 6.5
-mse = 83.3
+mae = 6.5,
+ mse = 83.3,
 Gender prediction accuracy = 87.4 % 
 
 - Test dataset 
-mae = 4.59
-mse = 37.9
+mae = 4.59,
+ mse = 37.9,
 gender prediction accuracy = 92.4%
 
 ## Future Scopes
