@@ -19,8 +19,12 @@ The project repository contains the following folders and files:
 - **predict.py**
 
 3. **C++**
-- **prediction** - Contained sample results
+- **prediction** - Contains sample results
 - **age_and_gender_prediction.cpp** - Script for making predictions on images or videos.
+- **age_deploy.prototxt**
+- **gender_deploy.prototxt**
+- **opencv_face_detector.pbtxt**
+- **opencv_face_detector_uint8.pb**
 
 ## Model Architecture and Training
 
@@ -108,6 +112,33 @@ The final predicted age for each face is the mean age of the corresponding bucke
 - Super-resolution is applied to each detected face region using the RRDN model.
 - Age and gender predictions are made for each face region using the custom model.
 - Predicted age and gender are annotated on the image, and the processed image is saved with the suffix _output.
+
+## Age and Gender prediction using C++
+The C++ program detects faces in images or videos using OpenCV's deep neural network module (dnn). It then predicts the age and gender of each detected face using pre-trained models. The age and gender prediction models are based on Convolutional Neural Networks (CNNs) implemented in Caffe.
+
+### Prerequisites
+Make sure you have the following installed on your system:
+
+- OpenCV 4.x or higher
+- CMake (for building the C++ code)
+
+The program supports two modes of operation:
+
+- Image Processing: Process a single image.
+- Video Processing: Process a video file.
+
+### Model Files
+The program requires the following pre-trained model files:
+
+- age_deploy.prototxt and age_net.caffemodel: Age prediction model.
+- gender_deploy.prototxt and gender_net.caffemodel: Gender prediction model.
+- opencv_face_detector_uint8.pb and opencv_face_detector.pbtxt: Face detection model.
+Ensure these model files are either placed in the same directory as the executable or specify their paths when prompted.
+
+### Output
+For each detected face, the program outputs the predicted gender and age group in the format Gender: <gender>, Age: <age group>.
+
+Additionally, the program draws bounding boxes around detected faces and overlays the predicted gender and age information on the image or video frames.
 
 ## Additional Notes
 - Ensure all required libraries and pretrained models are available.
