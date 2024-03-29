@@ -47,13 +47,14 @@ The model architecture consists of a custom neural network with skip CNN connect
 ### Fine-Tuning
 - The last five layers of the EfficientNetB7 were unfreezed and fine-tuned for another 10 epochs to improve performance.
 
-## Predict Script (predict.py)
+## Age_Prediction_1
+### Predict Script (predict.py)
 
-### Requirements
+#### Requirements
 - GPU access is recommended for faster prediction.
 - Required libraries: PyTorch, TensorFlow, OpenCV, NumPy, pandas, tqdm, matplotlib, PIL.
 
-### Usage
+#### Usage
 - **Arguments**:
   - `--type`: Type of input (`image` or `video`).
 - **Predicting on Images**:
@@ -64,7 +65,7 @@ The model architecture consists of a custom neural network with skip CNN connect
   - Predictions will be saved in the `prediction/{video_filename}` directory.
   - Output video with bounding boxes and person IDs will be saved if enabled.
 
-### Prediction Process
+#### Prediction Process
 - Load the input image or video frame by frame.
 - Use a pretrained Faster R-CNN model to detect people's faces.
 - For each detected face:
@@ -74,8 +75,22 @@ The model architecture consists of a custom neural network with skip CNN connect
   - Draw bounding boxes, predicted age, and gender on the frame.
 - Save the results in CSV format and optionally save frame images or output video.
 
-## **predict_1.py** script
+### **predict_1.py** script
 - predict_1.py is an alternative prediction script that employs a custom neural network model for age and gender detection
+
+### Usage 
+- Make sure to download all the checkkpoint paths from and place it under checkpoint folder under Age_Prediction_1
+- Make sure to place the required video and images under the video and image folder respectively under Age_Prediction_1
+- When prompted to enter the file name, make sure to enter the file extension also. e.g. If the filename is "test.mp4" then enter "test.mp4"
+- Download all the requirements using `pip install -r requirements.txt`
+- Finally run the following code for prediction on video
+- `python predict.py -- video`
+- To obtain prediction on image run the following command
+- `python predict.py -- image`
+- A example ipynb has been given for reference
+
+Similary predict_1.py can be run
+
 
 ## Age_Prediction_2
 - The prediction process is facilitated by a custom neural network model for age and gender detection, along with a pre-trained model for super-resolution enhancement. Additionally, face detection is carried out using a pre-trained MTCNN (Multi-Task Cascaded Convolutional Neural Network) model.
@@ -113,6 +128,12 @@ The final predicted age for each face is the mean age of the corresponding bucke
 - Super-resolution is applied to each detected face region using the RRDN model.
 - Age and gender predictions are made for each face region using the custom model.
 - Predicted age and gender are annotated on the image, and the processed image is saved with the suffix _output.
+
+### Usage
+- Download all the requirements using `pip install -r requirements.txt`
+- Follow all the steps in the ipynb to get predictions
+- Make sure to download `model_bucket_weights.h5` from the drive and place it in the working directory (in Age_Prediction_2 folder)
+- Carefully enter the input and output file path. Save output fiile with `.avi` extension
 
 ## Age and Gender prediction using C++
 The C++ program detects faces in images or videos using OpenCV's deep neural network module (dnn). It then predicts the age and gender of each detected face using pre-trained models. The age and gender prediction models are based on Convolutional Neural Networks (CNNs) implemented in Caffe.
