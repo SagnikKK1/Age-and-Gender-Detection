@@ -43,7 +43,7 @@ Here are some examples of face images before and after applying BM3D denoising:
 BM3d has a PSNR of 23.57
 
 
-![Original Face Image](Denoising/Results_images/Noisy_image.png) ![Denoised Face Image](Denoising/Results_images/bm3d_image.png)
+![Original Face Image](Results_images/Noisy_image.png) ![Denoised Face Image](Results_images/bm3d_image.png)
 
 ## Contributing
 
