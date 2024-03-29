@@ -138,6 +138,10 @@ The final predicted age for each face is the mean age of the corresponding bucke
 ## Age and Gender prediction using C++
 The C++ program detects faces in images or videos using OpenCV's deep neural network module (dnn). It then predicts the age and gender of each detected face using pre-trained models. The age and gender prediction models are based on Convolutional Neural Networks (CNNs) implemented in Caffe.
 
+## Future Scopes
+- Currently, we have employed the use of a non-ML algorithm known as bm3d for image denoising. We aim to integrate Machine Learning models such as MPRNet, KBnet. Also currently we have not integrated the denoised images into the prediction model. We aim to complete that in the future.
+- We also aim to integrate Deraining and Deblurring algorithms into the prediction model to furthur improve the range of quality of images that can be used.
+
 ### Prerequisites
 Make sure you have the following installed on your system:
 
