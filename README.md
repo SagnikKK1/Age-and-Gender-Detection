@@ -162,6 +162,9 @@ For each detected face, the program outputs the predicted gender and age group i
 
 Additionally, the program draws bounding boxes around detected faces and overlays the predicted gender and age information on the image or video frames.
 
+## Result
+Our C++ script performs best on video prediction and outputs a range of age. The mean age of the bucket may be taken for consideration of MAE
+
 ## Additional Notes
 - Ensure all required libraries and pretrained models are available.
 - Adjust the paths for the models and checkpoints as necessary.
