@@ -79,7 +79,7 @@ The model architecture consists of a custom neural network with skip CNN connect
 - predict_1.py is an alternative prediction script that employs a custom neural network model for age and gender detection
 
 ### Usage 
-- Make sure to download all the checkkpoint paths from and place it under checkpoint folder under Age_Prediction_1
+- Make sure to download all the checkkpoint paths from  https://drive.google.com/drive/folders/1_4m8BhuVMxbYW88SoS8KEo1hsdzsmecJ?usp=drive_link and place it under checkpoint folder under Age_Prediction_1
 - Make sure to place the required video and images under the video and image folder respectively under Age_Prediction_1
 - When prompted to enter the file name, make sure to enter the file extension also. e.g. If the filename is "test.mp4" then enter "test.mp4"
 - Download all the requirements using `pip install -r requirements.txt`
