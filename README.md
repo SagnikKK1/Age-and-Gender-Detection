@@ -167,6 +167,22 @@ Our C++ script performs best on video prediction and outputs a range of age. The
 
 All our sample results are available under `Prediction_Results` folder [here](https://drive.google.com/drive/folders/1_4m8BhuVMxbYW88SoS8KEo1hsdzsmecJ?usp=drive_link)
 
+Our results for UTKFACE which can be seen in utk_train.ipynb are:
+- Test dataset
+mae = 6.5
+mse = 82.9
+gender prediction accuracy = 89%
+
+- Validation dataset
+mae = 6.5
+mse = 83.3
+Gender prediction accuracy = 87.4 % 
+
+- Test dataset 
+mae = 4.59
+mse = 37.9
+gender prediction accuracy = 92.4%
+
 ## Future Scopes
 - Currently, we have employed the use of a non-ML algorithm known as bm3d for image denoising. We also used autoencoder netwroks for our deblurring task. We aim to integrate Machine Learning models specifically developed for deblurring such as KBnet for denoising images. Also currently we have not integrated the denoised images into the prediction model. We aim to complete that in the future.
 - We also aim to integrate Deraining and Deblurring algorithms into the prediction model to furthur improve the range of quality of images that can be used.
