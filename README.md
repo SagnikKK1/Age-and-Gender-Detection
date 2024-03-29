@@ -163,13 +163,18 @@ For each detected face, the program outputs the predicted gender and age group i
 Additionally, the program draws bounding boxes around detected faces and overlays the predicted gender and age information on the image or video frames.
 
 ## Result
-Our C++ script performs best on video prediction and outputs a range of age. The mean age of the bucket may be taken for consideration of MAE
+Our C++ script performs best on video prediction and outputs a range of age. The mean age of the bucket may be taken for consideration of MAE.
+
+All our sample results are available under `Prediction_Results` folder [here](https://drive.google.com/drive/folders/1_4m8BhuVMxbYW88SoS8KEo1hsdzsmecJ?usp=drive_link)
 
 ## Additional Notes
 - Ensure all required libraries and pretrained models are available.
 - Adjust the paths for the models and checkpoints as necessary.
 - For optimal performance, run the prediction script on a machine with GPU support.
 
+
+### Sources
+- https://github.com/rdev12/BOSCH-Age-and-Gender-Prediction
 
 
 ---
