@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project aims to detect the age and gender of individuals from images using computer vision techniques. As part of the preprocessing pipeline, a denoising step is applied to improve the quality of input images. In this project, the BM3D (Block-Matching 3D Filtering) algorithm is employed for denoising face images.
+This project aims to detect the age and gender of individuals from images using computer vision techniques. As part of the preprocessing pipeline, a denoising step will be applied to improve the quality of input images. In this project, the BM3D (Block-Matching 3D Filtering) algorithm is employed for denoising face images.
 
 ## Motivation
 
