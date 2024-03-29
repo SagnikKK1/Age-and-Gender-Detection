@@ -69,11 +69,52 @@ The model architecture consists of a custom neural network with skip CNN connect
   - Draw bounding boxes, predicted age, and gender on the frame.
 - Save the results in CSV format and optionally save frame images or output video.
 
+## **predict_1.py** script
+- predict_1.py is an alternative prediction script that employs a custom neural network model for age and gender detection
+
+## Age_Prediction_2
+- The prediction process is facilitated by a custom neural network model for age and gender detection, along with a pre-trained model for super-resolution enhancement. Additionally, face detection is carried out using a pre-trained MTCNN (Multi-Task Cascaded Convolutional Neural Network) model.
+
+### Custom Model for Age and Gender Detection
+- Architecture
+The custom neural network model is designed for age and gender detection from facial images. For age prediction, the age groups are bucketed into ranges such as (1-6), (7-12), etc., to facilitate easier classification, particularly in video prediction scenarios. The age prediction model outputs the mean age of each bucket as the final predicted age.
+- Training
+The model is trained on a dataset with annotated age and gender labels. During training, age labels are grouped into buckets, simplifying the classification task. The training process aims to optimize the model parameters to accurately predict both age and gender from facial images.
+- Bucketed Age Groups
+Age groups are divided into buckets to ease classification, especially in scenarios with multiple faces in a video stream. Each bucket represents a range of ages, such as (1-6), (7-12), etc.
+The final predicted age for each face is the mean age of the corresponding bucket.
+
+### Super Resolution Model
+- Library: The project utilizes the image super-resolution library available at idealo/image-super-resolution.
+- Model: The RRDN (Residual in Residual Dense Network) model is used for super-resolution enhancement.
+- Loading: The RRDN model is initialized with pre-trained weights for image enhancement.
+
+### Face Detection Model
+- Library: Face detection is performed using the MTCNN (Multi-Task Cascaded Convolutional Neural Network) model.
+- Initialization: MTCNN is initialized from the facenet_pytorch library.
+- Device: The model is run on GPU if available; otherwise, it falls back to CPU.
+
+### Prediction Process
+#### Video Prediction
+- The script reads frames from the input video (vid_1.mp4).
+- Faces are detected using the MTCNN model.
+- Super-resolution is applied to each detected face region using the RRDN model.
+- Age and gender predictions are made for each face region using the custom model.
+- Predicted age and gender are annotated on the frames, and the processed frames are written to the output video (output_1.avi).
+
+#### Image Prediction
+- The script reads the input image provided by the user.
+- Faces are detected using the MTCNN model.
+- Super-resolution is applied to each detected face region using the RRDN model.
+- Age and gender predictions are made for each face region using the custom model.
+- Predicted age and gender are annotated on the image, and the processed image is saved with the suffix _output.
+
 ## Additional Notes
 - Ensure all required libraries and pretrained models are available.
 - Adjust the paths for the models and checkpoints as necessary.
 - For optimal performance, run the prediction script on a machine with GPU support.
 
+
+
 ---
 
-Feel free to customize this README further based on additional details or requirements specific to your project.
