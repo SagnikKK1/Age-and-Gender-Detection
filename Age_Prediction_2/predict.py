@@ -72,7 +72,7 @@ output_age = Dense(1, activation='linear', name='age_output')(dropout_2)
 
 model = Model(inputs=[inputs], outputs=[output_gender, output_age])
 
-model.load_weights("/model_bucket_weights.h5")
+model.load_weights("model_bucket_weights.h5")
 
 def assign_age(age):
     if int(age) <= 12:
