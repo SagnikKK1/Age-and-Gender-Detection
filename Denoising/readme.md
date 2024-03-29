@@ -35,6 +35,11 @@ BM3D boasts a plethora of advantages, including its superior denoising performan
 
 The versatile applicability of BM3D extends across diverse domains, encompassing realms such as digital photography, video processing, medical imaging, and surveillance. Notably, BM3D finds particularly profound utility in contexts where the meticulous preservation of image details holds paramount significance, such as medical diagnosis or forensic analysis. The algorithm's efficacy and versatility render it an invaluable asset to researchers and practitioners within the realms of image processing and computer vision, perpetuating its status as a cornerstone denoising methodology.
 
+### Methodology:
+We have used the FFHQ Faces Data Set, which is high-quality image dataset of human faces, originally created as a benchmark for generative adversarial networks.The dataset consists of 70,000 high-quality PNG images at 1024×1024 resolution and contains considerable variation in terms of age, ethnicity and image background. It also has good coverage of accessories such as eyeglasses, sunglasses, hats, etc. The images were crawled from Flickr, thus inheriting all the biases of that website, and automatically aligned and cropped using dlib. Only images under permissive licenses were collected. Various automatic filters were used to prune the set, and finally Amazon Mechanical Turk was used to remove the occasional statues, paintings, or photos of photos.
+
+We have artificially added gaussian, unifrom and possion noise, and then tried to remove it using Block Matching 3D algorithm.
+
 
 ## Denoising with Autoencoder
 
