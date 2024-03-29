@@ -149,7 +149,7 @@ output_age = Dense(1, activation='linear', name='age_output')(dropout_2)
 
 model = Model(inputs=[inputs], outputs=[output_gender, output_age])
 
-model.load_weights("/checkpoint/weights.h5")
+model.load_weights("checkpoint/weights.h5")
 
 def get_pred_attributes(frame, x1, y1, x2, y2):
   img = frame[y1:y2, x1:x2]
