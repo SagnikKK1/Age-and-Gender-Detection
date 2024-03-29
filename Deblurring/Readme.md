@@ -2,7 +2,7 @@
 
 ## Overview
 
-MPRNet (Motion-Parallax-Retinex Network) is a cutting-edge deep learning-based approach designed for image deblurring tasks. It is particularly tailored for scenarios where motion blur is present, such as images captured in dynamic environments or by devices with limited stabilization capabilities like GoPro cameras. MPRNet utilizes a combination of advanced techniques, including motion analysis, parallax estimation, and Retinex-based processing, to effectively enhance image sharpness and clarity.
+MPRNet (Motion-Parallax-Retinex Network) is a cutting-edge deep learning-based approach designed for image deblurring tasks. It is particularly tailored for scenarios where motion blur is present, such as images captured in dynamic environments or by devices with limited stabilization capabilities like GoPro cameras. Here we require image deblurring so as to better identify the face of a person if present inside an image. MPRNet utilizes a combination of advanced techniques, including motion analysis, parallax estimation, and Retinex-based processing, to effectively enhance image sharpness and clarity.
 
 ## Methodology
 
@@ -22,12 +22,4 @@ To use MPRNet for image deblurring tasks, the following dependencies are require
 - PyTorch
 - NumPy
 - OpenCV
-
-## Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/mprnet.git
-cd mprnet
 
