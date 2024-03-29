@@ -3,28 +3,29 @@
 ## Overview
 This project aims to develop an age and gender detection system capable of accurately determining age and gender from human face images and real-time video streams from a mobile camera. The solution is capable of detecting the age and gender of at max 5 people in the image or video.
 
+
 ## Project Structure
 
-The project repository contains the following folders and files:
+The project repository is organized as follows:
 
-1. **Age_Prediction_1**
-- **checkpoint**: Contains saved checkpoints for the trained models.
-- **img**: Contains sample images for testing the prediction script.
-- **video**: Contains sample videos for testing the prediction script.
-- **prediction**: Output folder for storing prediction results.
-- **predict.py**: Script for making predictions on images or videos.
-- **predict_1.py**: Script for making predictions on images or videos with our custom trained model
+### Age_Prediction_1
+- checkpoint: Contains saved checkpoints for the trained models.
+- img: Contains sample images for testing the prediction script.
+- video: Contains sample videos for testing the prediction script.
+- prediction: Output folder for storing prediction results.
+- predict.py: Script for making predictions on images or videos.
+- predict_1.py: Script for making predictions on images or videos with our custom trained model.
 
-2. **Age_Prediction_2**
-- **predict.py**
+### Age_Prediction_2
+- predict.py: Script for making predictions on images or videos.
 
-3. **C++**
-- **prediction** - Contains sample results
-- **age_and_gender_prediction.cpp** - Script for making predictions on images or videos.
-- **age_deploy.prototxt**
-- **gender_deploy.prototxt**
-- **opencv_face_detector.pbtxt**
-- **opencv_face_detector_uint8.pb**
+### C++
+- prediction: Contains sample results.
+- age_and_gender_prediction.cpp: C++ script for making predictions on images or videos.
+- age_deploy.prototxt: Age prediction model architecture file.
+- gender_deploy.prototxt: Gender prediction model architecture file.
+- opencv_face_detector.pbtxt: Face detection model configuration file.
+- opencv_face_detector_uint8.pb: Face detection model weights file.
 
 ## Model Architecture and Training
 
